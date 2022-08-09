@@ -1,0 +1,16 @@
+@import url(./foonts.css);
+
+.hello {
+    color: red;
+    font-family: 'MyFont';
+    font-size: 75px;
+    background: url('../img/icon.png') center top no-repeat;
+    height: 1000px;
+}
+
+$background: yellow;
+
+li {
+    background-color: $background;
+    list-style-type: circle;
+}
