@@ -12,7 +12,7 @@ module.exports = {
         static: './dist',
     },
     output: {
-        filename: 'assets/js/[name].bundle.js',
+        filename: 'js/[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
@@ -23,15 +23,10 @@ module.exports = {
             inject: 'body',
         }),
         new MiniCssExtractPlugin({
-            filename: 'assets/css/[name].css'
+            filename: 'css/[name].css'
         }),
     ],
     module: {
-        generator: {
-            'asset/resource': {
-                outputPath: 'assets/'
-            }
-        },
         rules: [
             {
                 test: /\.s[ac]ss$/i,

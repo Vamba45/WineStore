@@ -1,16 +1,35 @@
-@import url(./foonts.css);
+@import url('../fonts/Montserrat.scss');
+@import url('../fonts/PlayfairDisplay.scss');
 
-.hello {
-    color: red;
-    font-family: 'MyFont';
-    font-size: 75px;
-    background: url('../img/icon.png') center top no-repeat;
-    height: 1000px;
+body {
+    font-size: 35px;
 }
 
-$background: yellow;
+.container {
+    max-width: 1110px;
+    width: 100%;
 
-li {
-    background-color: $background;
-    list-style-type: circle;
+    height: 200px;
+
+    background-color: violet;
+
+    margin: 0 auto;
+}
+
+.montserrat-bold {   
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+.montserrat-med {
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+.montserrat-reg {
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+.playfair-g {
+    font-family: 'PlayfairDisplay';
+    font-weight: 400;
 }
