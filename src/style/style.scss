@@ -3,8 +3,13 @@
 @import url('../fonts/Montserrat.scss');
 @import url('../fonts/PlayfairDisplay.scss');
 
+$phone: 600px;
+$tablet: 900px;
+$smallscreen: 1200px; 
+
 .container {
-    max-width: 1110px;
+    max-width: 1170px;
+    padding: 0 30px;
     width: 100%;
     margin: 0 auto;
 }
@@ -14,9 +19,6 @@ a {
 }
 
 body {
-    background: url(../img/bgc.png) center top no-repeat;
-    background-size: contain;
-
     color: #fff;
     font-family: Montserrat, sans-serif;
     font-size: 16px;
@@ -25,7 +27,10 @@ body {
 // <========================= HEADER 
 
 header {
-    margin: 30px 0 150px 0;
+    background: url(../img/bgc.png) center top no-repeat #696969;
+    background-size: cover;
+
+    padding: 30px 0 150px 0;
 }
 
 nav {
@@ -116,6 +121,117 @@ nav {
     }
 }
 
+@media screen and (max-width: $tablet) {
+    header {
+        padding-bottom: 70px;
+    }
+    .menu {
+        margin-bottom: 300px;
+    }
+    .buttons {
+            &__card,
+            &__degustation {
+                font-size: 14px;
+            }
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: flex-end;
+		&__address {}
+
+		&__tel {}
+    }
+
+    
+    //burger-menu
+
+    nav {
+        height: 100%;
+        background-image: radial-gradient(#696969, #3d3d3d);
+        position: fixed;
+        top: 0;
+        left: -285px;
+
+        transition: all 0.5s linear;
+
+        &.active {
+            left: 0;
+
+            .burger {
+                span {
+                    transition: all 0.5s linear;
+                    align-self: flex-start;
+                    &:first-child {
+                        width: 25%;
+                        align-self: flex-start;
+                        transform: rotate(-45deg) translate(-7px);
+                    }
+                    &:last-child {
+                        width: 25%;
+                        align-self: flex-start;
+                        transform: rotate(45deg) translate(-7px);
+                    }
+                }
+            }
+        }
+
+        .burger {
+            display: inline-block;
+            position: relative;
+            margin: 0;
+            right: -300px;
+            top: 10px;
+
+            cursor: pointer;
+
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 0;
+
+            span {
+                display: inline-block;
+                width: 50%;
+                height: 3px;
+
+                background-color: #fff;
+            }
+        }
+
+        .menu {
+            flex-direction: column;
+            
+            &__item {
+                border: none !important;
+            }
+
+            &__link {
+                font-size: 25px;
+            }
+
+            &.active {
+                left: 0;
+            }
+        }
+    }
+
+    header {
+        padding-bottom: 30px;
+    }
+    .buttons {
+            &__card,
+            &__degustation {
+                font-size: 12px;
+            }
+    }
+}
+
 // HEADER =========================>
 
 main {
@@ -141,7 +257,9 @@ h2 {
         align-items: center;
     }
 
-    &__title {}
+    &__title {
+        text-align: center;
+    }
 
     &__line {
         border-bottom: 1px solid #fff;
