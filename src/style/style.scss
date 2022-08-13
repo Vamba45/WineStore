@@ -95,30 +95,37 @@ nav {
     margin-bottom: 583px;
 }
 
+.btn {
+    font-size: 16px;
+    text-transform: uppercase;
+    
+    padding: 15px 30px;
+    cursor: pointer;
+
+    background-color: #99862A;
+
+    color: #fff;
+    
+    &:hover {
+        transition: all 0.15s linear;
+        box-shadow: 0px 0px 35px #99862A;
+        background-color: #817223;
+    }
+}
+
 .buttons {
     display: flex;
     justify-content: center;
 
     &__card,
     &__degustation {
-        font-size: 16px;
-        text-transform: uppercase;
-
-        padding: 15px 30px;
         margin: 0 15px;
-
-        cursor: pointer;
-
-        background-color: #99862A;
-
-        color: #fff;
-        
-        &:hover {
-            transition: all 0.15s linear;
-            box-shadow: 0px 0px 35px #99862A;
-            background-color: #817223;
-        }
     }
+}
+
+.line {
+    width: 160px;
+    border-bottom: 1px solid #000;
 }
 
 @media screen and (max-width: $tablet) {
@@ -266,8 +273,6 @@ h2 {
 
     &__line {
         border-bottom: 1px solid #fff;
-        width: 160px;
-
         margin: 40px 0;
     }
 
@@ -331,4 +336,119 @@ h2 {
         }
     }
 }
+
+//showcase
+
+.showcase {
+    color: #282828;
+    background: #E6E3C4;
+    padding: 80px 0;
+    font-size: 14px;
+
+    &__row {
+        border-bottom: 1px solid #998431;
+        border-top: 1px solid #998431;
+
+        padding: 60px 0;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__column {
+        &:first-child {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            max-width: 445px;
+            width: 100%;
+        }
+
+        &:last-child {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        line-height: 150%;
+        font-weight: 400;
+
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        color: #282828;
+    }
+
+    &__line {
+        margin: 30px 0;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+    }
+
+    &__table {
+        margin: 0 0 30px 0;
+    }
+
+    &__images {
+        max-width: 540px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__pictr {
+        &:first-child {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.table {
+    &__row {
+        display: flex;
+        border-bottom: 1px solid #282828;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &__year {
+        padding: 31px 24px 26px 24px;
+        border-right: 1px solid #282828;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0 30px;
+
+        span {
+            p {
+                font-family: 'Playfair Display', serif;
+                font-size: 18px;
+                line-height: 150%;
+            }
+        }
+
+        p {
+            font-size: 14px;    
+        }
+    }
+}
+
 

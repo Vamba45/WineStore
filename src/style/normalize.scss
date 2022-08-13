@@ -25,7 +25,7 @@
   /**
    * Remove the margin in all browsers.
    */
-  
+
   body {
     margin: 0;
   }
@@ -372,4 +372,8 @@ a {
   
   [hidden] {
     display: none;
+  }
+
+  img {
+    display: block;
   }
