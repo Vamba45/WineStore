@@ -251,6 +251,7 @@ nav {
 h2 {
     font-size: 36px;
     font-family: PlayfairDisplay, serif;
+    font-weight: normal;
     color: #fff;
 }
 
@@ -337,7 +338,10 @@ h2 {
     }
 }
 
-//showcase
+
+// REVIEW =========================>
+
+// <========================= SHOWCASE
 
 .showcase {
     color: #282828;
@@ -450,5 +454,170 @@ h2 {
         }
     }
 }
+
+
+// REVIEW =========================>
+
+// <========================= DEGUSTATION
+
+.degustation {
+    background: #282828;
+    padding: 100px 0;
+
+    &__row {
+        border: 3px solid #C4C4C4;
+        border-top: none;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        position: relative;
+
+        &::after, &::before {
+            content: '';
+
+            width: 260px;
+            height: 260px;
+
+            position: absolute;
+
+            margin: 0;
+            padding: 0;
+
+            top: -45px;
+        }
+
+        &::after {
+            width: 200px;
+            right: -50px;
+
+            background: url(../img/barell.png) center no-repeat;
+        }
+
+        &::before {
+            left: -40px;
+
+            background: url(../img/grape.png) center no-repeat;
+        }
+    }
+
+    &__column {
+        max-width: 540px;
+        width: 100%;
+    }
+
+    &__title {
+        text-align: center;
+        position: relative;
+
+        &::after, &::before {
+            content: '';
+
+            width: 100px;
+            height: 3px;
+
+            position: absolute;
+
+            background-color: #fff;
+
+            margin: 0;
+            padding: 0;
+
+            top: 23px;
+        }
+
+        &::after {
+            right: -50px;
+        }
+
+        &::before {
+            left: -50px;
+        }
+    }
+
+    &__line {
+        border-color: #fff;
+
+        margin: 40px 0;
+    }
+
+    &__text {
+        text-align: center;
+        font-weight: normal;
+
+        margin-bottom: 80px;
+    }
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+
+    input {
+        background-color: #282828;
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+
+        font-size: 13px;
+
+        color: #fff;
+
+        &::placeholder {
+            transition: 0.5s;
+        }
+
+        &:focus {
+            outline: none;
+            border-bottom: 2px solid #998431;
+            
+                &::placeholder {
+                font-size: 10px;
+                transform: translateY(-14px);
+            }
+        }
+    }
+
+    &__name,
+    &__tel {
+        max-width: 255px;
+        width: 100%;
+
+        margin-bottom: 40px;
+    }
+
+    &__tel {
+        margin-left: 30px;
+    }
+
+    &__address {
+        width: 100%;
+    }
+
+    &__submit {
+        max-width: 538px;
+        width: 100%;
+
+        padding: 15px 0;
+        margin: 50px 0 0 0;
+
+        text-transform: uppercase;
+        color: #FFF;
+
+        background: #282828;
+        cursor: pointer;
+        border: 1px solid #fff;
+
+        &:hover {
+            color: #282828;
+            background: #fff;
+        }
+    }
+
+    margin-bottom: 80px;
+}
+
+
+// DEGUSTATION =========================>
 
 
