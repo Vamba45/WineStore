@@ -644,7 +644,7 @@ h2 {
 
             &::after,
             &::before {
-                background: none;
+                display: none;
             }
         }
     }
@@ -802,12 +802,6 @@ footer {
     footer {
         padding-right: 150px;
         padding-left: 150px;
-
-        .list__item:hover {
-            background-color: #282828;
-            color: #fff;
-            text-decoration: none;
-        }
 
         .list {
             .list__item {
